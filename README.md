@@ -23,12 +23,12 @@ Install requirements.txt
 Clone the repository
 
 ```bash
-https://github.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow
+https://github.com/Devthilina-Fernando/Machine-Learning-project-with-MLflow
 ```
 ### STEP 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -n mlproj python=3.8 -y
+conda create -n mlproj python=3.9 -y
 ```
 
 ```bash
@@ -53,7 +53,7 @@ open up you local host and port
 ```
 
 
-
+ 
 ## MLflow
 
 [Documentation](https://mlflow.org/docs/latest/index.html)
@@ -65,20 +65,22 @@ open up you local host and port
 ### dagshub
 [dagshub](https://dagshub.com/)
 
-MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow.mlflow \
-MLFLOW_TRACKING_USERNAME=entbappy \
-MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0 \
-python script.py
+import dagshub
+dagshub.init(repo_owner='Devthilina-Fernando', repo_name='Machine-Learning-project-with-MLflow', mlflow=True)
+
+import mlflow
+with mlflow.start_run():
+  mlflow.log_param('parameter name', 'value')
+  mlflow.log_metric('metric name', 1)
 
 Run this to export as env variables:
 
 ```bash
 
-export MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow.mlflow
+export MLFLOW_TRACKING_URI=https://dagshub.com/Devthilina-Fernando/Machine-Learning-project-with-MLflow.mlflow
 
-export MLFLOW_TRACKING_USERNAME=entbappy 
-
-export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
+export MLFLOW_TRACKING_USERNAME=Devthilina-Fernando
+export MLFLOW_TRACKING_PASSWORD=Dev@123thilina
 
 ```
 
